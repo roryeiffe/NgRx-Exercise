@@ -14,12 +14,17 @@ import { Food } from './models/food.model';
 export class AppComponent {
   // Using the selector, select foods from the store
   foods$ = this.store.select(selectFoods);
-  // Todo: Using the selector, select the cart from the store
+  // TODO: Using the selector, select the cart from the store
   cart$ = []
 
   // TODO: Complete this function to add the selected food to the cart
   onAdd(id: string) {
     console.log("Adding food to cart: ", id)
+  }
+
+  // TODO: Complete this function to remove the selected food from the cart
+  onRemove(id: string) {
+    console.log("Removing food from cart: ", id)
   }
 
   constructor(private foodService: FoodService, private store: Store) {  }
