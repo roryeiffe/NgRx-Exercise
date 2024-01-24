@@ -20,6 +20,7 @@ export class FoodService {
   getFoodsHelper(): Array<Food> {
     const foods: Array<Food> = [
       {
+        id: '1',
         name: 'Pizza',
         group: 'grain',
         description: 'A delicious pie',
@@ -27,6 +28,7 @@ export class FoodService {
         ingredients: ['cheese', 'tomato sauce', 'dough']
       },
       {
+        id: '2',
         name: 'Salad',
         group: 'vegetable',
         description: 'A healthy mix of vegetables',
@@ -34,6 +36,7 @@ export class FoodService {
         ingredients: ['lettuce', 'tomato', 'carrot']
       },
       {
+        id: '3',
         name: 'Burger',
         group: 'meat',
         description: 'A delicious sandwich',
@@ -41,6 +44,7 @@ export class FoodService {
         ingredients: ['bun', 'patty', 'lettuce', 'tomato']
       },
       {
+        id: '4',
         name: 'Ice Cream',
         group: 'dairy',
         description: 'A delicious dessert',
@@ -48,6 +52,7 @@ export class FoodService {
         ingredients: ['milk', 'cream', 'sugar']
       },
       {
+        id: '5',
         name: 'Tacos',
         group: 'meat',
         description: 'A delicious mexican dish',

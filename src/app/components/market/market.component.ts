@@ -11,11 +11,11 @@ export class MarketComponent {
   @Input() foods: ReadonlyArray<Food> = [];
   // This is the event that will be emitted when the user clicks the "Add" button
   // It signifies that the food is being added to the cart:
-  @Output() add = new EventEmitter<Food>();
+  @Output() add = new EventEmitter<string>();
 
-  
-  addFood(food: Food) {
-    this.add.emit(food);
+
+  addFood(id: string) {
+    this.add.emit(id);
   }
 
 }

@@ -5,6 +5,7 @@ The following application displays a list of food items and some details about t
 As of right now, the app utilizes NgRx to display the list of food items in the "Market" section. The list of food items is stored in the `FoodState` and is retrieved using a selector. The `FoodState` also contains a list of food items that have been added to the cart. This list is currently empty and the "Cart" section is not displaying any food items.
 
 Take some time to explore the app and see how things are functioning. In particular, note the following:
+- [Food Model](src/app/models/food.model.ts) - This model is used to represent a food item. It contains the name of the food item, the price, and the quantity. Note that it also includes a unique id.
 - [Market Component](src/app/components/market/market.component.ts) - This component is responsible for displaying the list of food items in the "Market" section. It retrieves the list of food items from the `FoodState` using a selector.
 - [Food Service](src/app/services/food.service.ts) - This service is responsible for retrieving the list of food items from the "server". Mock data is used for this example so the app does not actually consume an external API. Feel free to edit the mock data in the service to add more food items.
 - [Food Reducer](src/app/state/foods.reducer.ts) - This reducer is responsible for updating the `FoodState` when the mock server is called. It simply populates the state with the contents of the mock data.
@@ -17,7 +18,7 @@ Take some time to explore the app and see how things are functioning. In particu
 Look out for TODO statements in the following places
 - [Cart Actions](src/app/state/foods.actions.ts) - This file already contains an action that is used to populate the market state based on the mock data. You will need to add more actions to implement the ability to add/remove items from the cart.
 - [Cart Reducer](src/app/state/cart.reducer.ts) - This reducer should be responsible for updating the cart when a food item is added. The file is currently empty and you will need to add the necessary code to implement this functionality.
-- [Cart Selectors](src/app/state/foods.selectors.ts) - This file already contains a selector that is used to retrieve the list of food items for the market. You will need to add another selector to retrieve the list of food items in the cart.
+- [Cart Selectors](src/app/state/foods.selectors.ts) - This file already contains a selector that is used to retrieve the list of food items for the market. You will need to add another selector(s) to retrieve the list of food items in the cart.
 - [Cart Component](src/app/components/cart/cart.component.ts) - This component is responsible for displaying the list of food items in the "Cart" section. Currently, it does not have functionality to remove items from the cart. You will need to add this functionality.
 - [App Component](src/app/app.component.ts) - This component is responsible for displaying the "Market" and "Cart" sections, as well as ensuring functionality across all components. You will need to look out for TODO statements in order to fill out this functionality.
 - [App Module](src/app/app.module.ts) - This module is where the NgRx store is configured. You will need to add the newly created reducer to the store.

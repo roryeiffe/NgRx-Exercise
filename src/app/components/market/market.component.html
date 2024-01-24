@@ -8,5 +8,5 @@
     <ul>
         <li *ngFor="let ingredient of food.ingredients">{{ingredient}}</li>
     </ul>
-  <button (click)="addFood(food)">Add To Cart</button>
+  <button (click)="addFood(food.id)">Add To Cart</button>
 </div>

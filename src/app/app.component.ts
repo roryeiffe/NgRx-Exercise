@@ -18,8 +18,8 @@ export class AppComponent {
   cart$ = []
 
   // TODO: Complete this function to add the selected food to the cart
-  onAdd(food: Food) {
-    console.log("Adding food to cart: ", food)
+  onAdd(id: string) {
+    console.log("Adding food to cart: ", id)
   }
 
   constructor(private foodService: FoodService, private store: Store) {  }
