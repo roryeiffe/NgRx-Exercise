@@ -9,8 +9,11 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class MarketComponent {
   @Input() foods: ReadonlyArray<Food> = [];
+  // This is the event that will be emitted when the user clicks the "Add" button
+  // It signifies that the food is being added to the cart:
   @Output() add = new EventEmitter<Food>();
 
+  
   addFood(food: Food) {
     this.add.emit(food);
   }
